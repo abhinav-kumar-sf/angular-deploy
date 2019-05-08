@@ -6,6 +6,8 @@ const path = require('path');
 
 const app = express();
 
+const PORT = process.env.port || 8080;
+
 // Serve only the static files from the dist directory
 
 // Replace the '/dist/<to_your_project_name>'
@@ -22,4 +24,13 @@ app.get('*', function(req,res){
 
 // Start the app ly listening on the defalut heroku part
 
-app.listen(process.env.port || 8080);
+app.listen(PORT, function(error,data
+){
+    if(error){
+        console.log("Error in App "+error) ;
+    }
+    else{
+        console.log("App started at Port ",PORT)
+    }
+
+});
