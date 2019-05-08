@@ -6,7 +6,7 @@ const path = require('path');
 
 const app = express();
 
-const PORT = process.env.port || 8080;
+const Port = process.env.PORT || 8080;
 
 // Serve only the static files from the dist directory
 
@@ -24,13 +24,13 @@ app.get('*', function(req,res){
 
 // Start the app ly listening on the defalut heroku part
 
-app.listen(PORT, function(error,data
+app.listen(Port, function(error,data
 ){
     if(error){
         console.log("Error in App "+error) ;
     }
     else{
-        console.log("App started at Port ",PORT)
+        console.log("App started at Port ",Port)
     }
 
 });
